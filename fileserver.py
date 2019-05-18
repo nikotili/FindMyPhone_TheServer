@@ -10,7 +10,7 @@ def receive_file_from(client_socket):
     header = client_socket.recv(DEFAULT_BUFFER_SIZE)
     if IMAGE.encode() == header:
         received_bytes = client_socket.recv(DEFAULT_BUFFER_SIZE)
-        file = open("test.jpg", "ab")
+        file = open("image.jpg", "ab")
         while received_bytes != ''.encode():
             file.write(received_bytes)
             received_bytes = client_socket.recv(DEFAULT_BUFFER_SIZE)
