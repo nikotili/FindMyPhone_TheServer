@@ -17,6 +17,7 @@ def insert_into_users(values):
     print(cursor.fetchone())
     print(cursor.fetchone())
     print(cursor.fetchone())
+    db.commit()
     db.close()
 
 
